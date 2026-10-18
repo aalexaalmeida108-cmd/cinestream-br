@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4), transparent);
     position: fixed;
     top: 0;
     left: 0;
@@ -35,9 +35,26 @@ header {
 
 .logo {
     color: var(--accent);
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+.search-container input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    width: 280px;
+    font-size: 14px;
+    outline: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.search-container input:focus {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: var(--accent);
 }
 
 .nav-links {
@@ -49,7 +66,7 @@ header {
     background: transparent;
     border: 1px solid rgba(255,255,255,0.2);
     color: var(--text-main);
-    padding: 6px 14px;
+    padding: 6px 16px;
     border-radius: 20px;
     cursor: pointer;
     font-size: 14px;
@@ -63,12 +80,57 @@ header {
 
 .container {
     max-width: 1400px;
-    margin: 100px auto 40px;
+    margin: 0 auto 40px;
     padding: 0 40px;
 }
 
-h1 {
-    font-size: 28px;
+.hero {
+    height: 480px;
+    background: linear-gradient(to top, var(--bg-primary), transparent), url('https://image.tmdb.org/t/p/original/yEEpQJENq4DLtSO06HY7TRoXeqO.png') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px 40px;
+    margin-top: 80px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: #f40612;
+    transform: scale(1.05);
+}
+
+.catalog-section h2 {
+    font-size: 24px;
     margin-bottom: 20px;
 }
 
@@ -105,6 +167,9 @@ h1 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-meta {

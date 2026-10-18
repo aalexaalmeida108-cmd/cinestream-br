@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamBR - Filmes, Séries, Documentários e TV com Áudio PT-BR</title>
+    <title>StreamBR - Filmes, Séries, Documentários e TV ao Vivo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="logo">StreamBR</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Pesquisar filmes, séries, canais...">
+        </div>
         <nav class="nav-links">
-            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn active" data-filter="all">Início</button>
             <button class="filter-btn" data-filter="movie">Filmes</button>
             <button class="filter-btn" data-filter="series">Séries</button>
             <button class="filter-btn" data-filter="documentary">Documentários</button>
@@ -18,10 +21,22 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Catálogo Completo (Prioridade PT-BR)</h1>
-        <div id="catalogGrid" class="grid"></div>
-    </div>
+    <main class="container">
+        <section id="heroSection" class="hero">
+            <div class="hero-content">
+                <h1 id="heroTitle">Carregando Destaque...</h1>
+                <p id="heroOverview">Explore os melhores conteúdos dublados e legendados em português do Brasil.</p>
+                <div class="hero-buttons">
+                    <button id="heroPlayBtn" class="btn-primary">▶ Assistir Agora</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <h2 id="sectionTitle">Catálogo Completo (Prioridade PT-BR)</h2>
+            <div id="catalogGrid" class="grid"></div>
+        </section>
+    </main>
 
     <div id="playerModal" class="modal">
         <div class="modal-content">
@@ -33,6 +48,13 @@
                 <div class="control-group">
                     <label for="audioSelect">Áudio:</label>
                     <select id="audioSelect"></select>
+                </div>
+                <div id="episodeSelectorContainer" class="control-group" style="display: none;">
+                    <label for="episodeSelect">Episódio:</label>
+                    <select id="episodeSelect">
+                        <option value="ep1">Temporada 1 - Ep 1</option>
+                        <option value="ep2">Temporada 1 - Ep 2</option>
+                    </select>
                 </div>
             </div>
         </div>
