@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamBR - Filmes, Séries, Documentários e TV ao Vivo</title>
+    <title>CineStream BR - Filmes, Séries & TV com Servidores Múltiplos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">StreamBR</div>
+    <header class="header">
+        <div class="logo">CineStream <span style="color:#a855f7">BR</span></div>
         <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Pesquisar filmes, séries, canais...">
+            <input type="text" id="searchInput" placeholder="Pesquisar filmes, séries (ex: Reacher)...">
         </div>
         <nav class="nav-links">
             <button class="filter-btn active" data-filter="all">Início</button>
             <button class="filter-btn" data-filter="movie">Filmes</button>
             <button class="filter-btn" data-filter="series">Séries</button>
-            <button class="filter-btn" data-filter="documentary">Documentários</button>
-            <button class="filter-btn" data-filter="live">Canais TV</button>
         </nav>
     </header>
 
-    <main class="container">
+    <main class="main-container">
         <section id="heroSection" class="hero">
             <div class="hero-content">
-                <h1 id="heroTitle">Carregando Destaque...</h1>
-                <p id="heroOverview">Explore os melhores conteúdos dublados e legendados em português do Brasil.</p>
+                <span class="badge">Áudio PT-BR Prioritário</span>
+                <h1 id="heroTitle">Reacher</h1>
+                <p id="heroOverview">Jack Reacher, um veterano investigador da polícia militar, entra na vida civil e começa a vagar pelos Estados Unidos.</p>
                 <div class="hero-buttons">
                     <button id="heroPlayBtn" class="btn-primary">▶ Assistir Agora</button>
                 </div>
@@ -33,32 +33,53 @@
         </section>
 
         <section class="catalog-section">
-            <h2 id="sectionTitle">Catálogo Completo (Prioridade PT-BR)</h2>
+            <div class="section-header">
+                <h2>Destaques & Séries Populares</h2>
+            </div>
             <div id="catalogGrid" class="grid"></div>
         </section>
     </main>
 
     <div id="playerModal" class="modal">
         <div class="modal-content">
-            <button id="closeModal" class="close-btn">&times;</button>
+            <div class="modal-header">
+                <span id="playerTitle" class="modal-title">Reproduzindo</span>
+                <button id="closeModal" class="close-btn">&times;</button>
+            </div>
             <div class="video-container">
-                <video id="videoPlayer" controls crossorigin="anonymous"></video>
+                <iframe id="videoPlayerFrame" class="player-iframe" src="" allowfullscreen></iframe>
             </div>
             <div class="player-controls-bar">
                 <div class="control-group">
-                    <label for="audioSelect">Áudio:</label>
-                    <select id="audioSelect"></select>
+                    <label for="serverSelect">Servidor:</label>
+                    <select id="serverSelect"></select>
                 </div>
-                <div id="episodeSelectorContainer" class="control-group" style="display: none;">
-                    <label for="episodeSelect">Episódio:</label>
+                <div id="seasonEpisodeContainer" class="control-group" style="display: none;">
+                    <label for="seasonSelect">Temp:</label>
+                    <select id="seasonSelect">
+                        <option value="1">Temporada 1</option>
+                        <option value="2">Temporada 2</option>
+                        <option value="3">Temporada 3</option>
+                    </select>
+                    <label for="episodeSelect">Ep:</label>
                     <select id="episodeSelect">
-                        <option value="ep1">Temporada 1 - Ep 1</option>
-                        <option value="ep2">Temporada 1 - Ep 2</option>
+                        <option value="1">Ep 1</option>
+                        <option value="2">Ep 2</option>
+                        <option value="3">Ep 3</option>
+                        <option value="4">Ep 4</option>
+                        <option value="5">Ep 5</option>
+                        <option value="6">Ep 6</option>
+                        <option value="7">Ep 7</option>
+                        <option value="8">Ep 8</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 CineStream BR. Todos os direitos reservados. Servidores de streaming em alta velocidade com áudio PT-BR.</p>
+    </footer>
 
     <script src="app.js"></script>
 </body>
