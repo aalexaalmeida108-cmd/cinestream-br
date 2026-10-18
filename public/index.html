@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamBR - Filmes, Séries, Documentários e TV com Áudio PT-BR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">StreamBR</div>
+        <nav class="nav-links">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="movie">Filmes</button>
+            <button class="filter-btn" data-filter="series">Séries</button>
+            <button class="filter-btn" data-filter="documentary">Documentários</button>
+            <button class="filter-btn" data-filter="live">Canais TV</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Catálogo Completo (Prioridade PT-BR)</h1>
+        <div id="catalogGrid" class="grid"></div>
+    </div>
+
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-btn">&times;</button>
+            <div class="video-container">
+                <video id="videoPlayer" controls crossorigin="anonymous"></video>
+            </div>
+            <div class="player-controls-bar">
+                <div class="control-group">
+                    <label for="audioSelect">Áudio:</label>
+                    <select id="audioSelect"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

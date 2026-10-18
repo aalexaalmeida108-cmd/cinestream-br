@@ -1,0 +1,193 @@
+[
+  {
+    "id": "hope-2026-8qn3xr",
+    "title": "Hope: O Amanhã (2026)",
+    "type": "movie",
+    "overview": "Uma emocionante jornada dramática de sobrevivência em uma colônia espacial distante, onde a humanidade busca um novo lar.",
+    "poster": "https://image.tmdb.org/t/p/w500/yEEpQJENq4DLtSO06HY7TRoXeqO.png",
+    "backdrop": "https://image.tmdb.org/t/p/original/yEEpQJENq4DLtSO06HY7TRoXeqO.png",
+    "year": 2026,
+    "rating": "8.4",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado Oficial", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/hope_pt.vtt" }
+    ]
+  },
+  {
+    "id": "stellar-odyssey-2025",
+    "title": "Stellar Odyssey",
+    "type": "series",
+    "overview": "Série épica de exploração espacial pelos confins do universo em busca das origens da civilização.",
+    "poster": "https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.jpg",
+    "year": 2025,
+    "rating": "9.1",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/stellar_pt.vtt" }
+    ]
+  },
+  {
+    "id": "earth-pulse-doc",
+    "title": "Earth Pulse: Planeta Vivo",
+    "type": "documentary",
+    "overview": "Uma análise impressionante sobre as mudanças climáticas globais e a incrível resiliência da vida selvagem.",
+    "poster": "https://image.tmdb.org/t/p/w500/pFlaoHWLzNkGzX6UqE26w4lqjZk.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/pFlaoHWLzNkGzX6UqE26w4lqjZk.jpg",
+    "year": 2024,
+    "rating": "9.5",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Narração PT-BR", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/earth_pt.vtt" }
+    ]
+  },
+  {
+    "id": "tv-channel-news",
+    "title": "Global News 24/7 (Ao Vivo)",
+    "type": "live",
+    "overview": "Cobertura jornalística contínua ao vivo cobrindo os principais fatos do Brasil e do mundo.",
+    "poster": "https://image.tmdb.org/t/p/w500/q719jzvZeOoYvhuOZvO89M40h94.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/q719jzvZeOoYvhuOZvO89M40h94.jpg",
+    "year": 2026,
+    "rating": "Live",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Ao Vivo", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" }
+    ],
+    "subtitles": []
+  },
+  {
+    "id": "cyber-matrix-2025",
+    "title": "Cyber Matrix",
+    "type": "movie",
+    "overview": "Em um futuro cyberpunk dominado por corporações, um hacker descobre uma falha que pode libertar a humanidade.",
+    "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "year": 2025,
+    "rating": "8.8",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/matrix_pt.vtt" }
+    ]
+  },
+  {
+    "id": "wild-amazon-doc",
+    "title": "Amazônia: O Pulmão do Mundo",
+    "type": "documentary",
+    "overview": "Explore a biodiversidade única da floresta amazônica e os mistérios de seus rios caudalosos.",
+    "poster": "https://image.tmdb.org/t/p/w500/rSPw7gzHzwhvWvLKBnt2Aokqg7m.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/rSPw7gzHzwhvWvLKBnt2Aokqg7m.jpg",
+    "year": 2023,
+    "rating": "9.3",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4" },
+      { "lang": "en", "label": "English", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackSeeTheWorld.mp4" }
+    ],
+    "subtitles": []
+  },
+  {
+    "id": "urban-legends-series",
+    "title": "Lendas Urbanas: Investigação",
+    "type": "series",
+    "overview": "Série investigativa de suspense que desvenda mistérios e mitos arrepiantes ao redor do globo.",
+    "poster": "https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+    "year": 2026,
+    "rating": "8.6",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/legends_pt.vtt" }
+    ]
+  },
+  {
+    "id": "tv-channel-sports",
+    "title": "Sports HD Brasil (Ao Vivo)",
+    "type": "live",
+    "overview": "Transmissões ao vivo 24 horas de futebol, automobilismo, basquete e grandes eventos esportivos.",
+    "poster": "https://image.tmdb.org/t/p/w500/q719jzvZeOoYvhuOZvO89M40h94.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/q719jzvZeOoYvhuOZvO89M40h94.jpg",
+    "year": 2026,
+    "rating": "Live",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Narração Ao Vivo", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" }
+    ],
+    "subtitles": []
+  },
+  {
+    "id": "deep-ocean-secrets",
+    "title": "Segredos do Oceano Profundo",
+    "type": "documentary",
+    "overview": "Mergulhe nas profundezas inexploradas dos oceanos e descubra criaturas fascinantes e bioluminescentes.",
+    "poster": "https://image.tmdb.org/t/p/w500/kyeA0ZisXWlKz3UuT15eQh7H49z.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/kyeA0ZisXWlKz3UuT15eQh7H49z.jpg",
+    "year": 2024,
+    "rating": "9.2",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" }
+    ],
+    "subtitles": []
+  },
+  {
+    "id": "chronos-paradox",
+    "title": "O Paradoxo de Chronos",
+    "type": "movie",
+    "overview": "Cientistas criam uma máquina do tempo, mas cada salto altera irreversivelmente o destino da Terra.",
+    "poster": "https://image.tmdb.org/t/p/w500/8UlWupD7lCIqgzju0tK3pYj6EWe.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/8UlWupD7lCIqgzju0tK3pYj6EWe.jpg",
+    "year": 2026,
+    "rating": "8.9",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublagem Premium", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/chronos_pt.vtt" }
+    ]
+  },
+  {
+    "id": "tv-channel-movies",
+    "title": "CineBR Hits (Ao Vivo)",
+    "type": "live",
+    "overview": "Canal de filmes 24h por dia com os maiores sucessos de bilheteria e clássicos do cinema dublados.",
+    "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "year": 2026,
+    "rating": "Live",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Transmissão Ao Vivo", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" }
+    ],
+    "subtitles": []
+  },
+  {
+    "id": "shadow-detective",
+    "title": "O Detetive das Sombras",
+    "type": "series",
+    "overview": "Um detetive brilhante com um passado sombrio resolve crimes misteriosos em uma metrópole chuvosa.",
+    "poster": "https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+    "year": 2025,
+    "rating": "8.7",
+    "audioTracks": [
+      { "lang": "pt-BR", "label": "Português (Brasil) - Dublado", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" },
+      { "lang": "en", "label": "English - Original", "src": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" }
+    ],
+    "subtitles": [
+      { "lang": "pt-BR", "label": "Português (BR)", "src": "/subs/shadow_pt.vtt" }
+    ]
+  }
+]
