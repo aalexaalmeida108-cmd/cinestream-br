@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineStream - Filmes e Séries em Português Brasil com Dublagem">
+    <meta name="theme-color" content="#0f172a">
+    <title>🎬 CineStream · Filmes e Séries em PT-BR</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/">🎬 CineStream</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" data-page="home" class="nav-link active">Início</a></li>
+                    <li><a href="#" data-page="movies" class="nav-link">Filmes</a></li>
+                    <li><a href="#" data-page="series" class="nav-link">Séries</a></li>
+                    <li><a href="#" data-page="calendar" class="nav-link">Lançamentos</a></li>
+                    <li><a href="#" data-page="explore" class="nav-link">Explorar</a></li>
+                    <li><a href="#" data-page="favorites" class="nav-link">Favoritos</a></li>
+                </ul>
+                <div class="nav-right">
+                    <input type="search" id="search-input" placeholder="Buscar filme ou série..." class="search-input">
+                    <button id="settings-btn" class="btn-icon">⚙️</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <section id="home-page" class="page active">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Bem-vindo ao CineStream</h1>
+                        <p>Assista filmes e séries em português com dublagem profissional</p>
+                        <button class="btn btn-primary" onclick="navigateTo('movies')">Ver Filmes</button>
+                    </div>
+                </div>
+
+                <div class="featured-section">
+                    <h2>Em Destaque</h2>
+                    <div class="carousel" id="featured-carousel">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+
+                <div class="sections-grid">
+                    <div class="section">
+                        <h2>Filmes Populares</h2>
+                        <div class="cards-grid" id="popular-movies">
+                            <!-- Loaded via JS -->
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Séries em Alta</h2>
+                        <div class="cards-grid" id="popular-series">
+                            <!-- Loaded via JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Movies Page -->
+            <section id="movies-page" class="page">
+                <div class="page-header">
+                    <h1>Filmes</h1>
+                    <div class="filter-group">
+                        <select id="genre-filter" class="filter-select">
+                            <option value="">Todos os Gêneros</option>
+                            <option value="action">Ação</option>
+                            <option value="comedy">Comédia</option>
+                            <option value="drama">Drama</option>
+                            <option value="scifi">Ficção Científica</option>
+                            <option value="horror">Terror</option>
+                            <option value="romance">Romance</option>
+                        </select>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="trending">Mais Popular</option>
+                            <option value="newest">Mais Recente</option>
+                            <option value="rating">Melhor Avaliado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cards-grid" id="movies-grid">
+                    <!-- Loaded via JS -->
+                </div>
+            </section>
+
+            <!-- Series Page -->
+            <section id="series-page" class="page">
+                <div class="page-header">
+                    <h1>Séries TV</h1>
+                    <div class="filter-group">
+                        <select id="series-genre-filter" class="filter-select">
+                            <option value="">Todos os Gêneros</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cards-grid" id="series-grid">
+                    <!-- Loaded via JS -->
+                </div>
+            </section>
+
+            <!-- Player Page -->
+            <section id="player-page" class="page">
+                <div class="player-container">
+                    <button class="btn-back" onclick="navigateTo('home')">← Voltar</button>
+                    <div class="player-wrapper">
+                        <iframe id="player-iframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="player-info" id="player-info">
+                        <!-- Info loaded via JS -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal de Configurações -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <h2>Configurações</h2>
+                <div class="settings-group">
+                    <label>
+                        <input type="checkbox" id="setting-dubbing" checked>
+                        Preferir Dublagem PT-BR
+                    </label>
+                    <label>
+                        <input type="checkbox" id="setting-subtitles">
+                        Mostrar Legendas
+                    </label>
+                    <label>
+                        <input type="checkbox" id="setting-hd">
+                        Qualidade HD (quando disponível)
+                    </label>
+                </div>
+                <div class="settings-group">
+                    <label>Tema:</label>
+                    <select id="setting-theme">
+                        <option value="dark">Escuro</option>
+                        <option value="light">Claro</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading spinner -->
+    <div id="loading" class="loading-spinner" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
