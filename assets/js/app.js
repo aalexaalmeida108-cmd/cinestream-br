@@ -3,7 +3,7 @@
 const AppState = {
     currentPage: 'home',
     currentContent: null,
-    currentServer: 'original',
+    currentServer: 'myembed',
     currentSeason: 1,
     currentEpisode: 1,
     favorites: JSON.parse(localStorage.getItem('cs:favorites') || '[]'),
