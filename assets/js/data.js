@@ -17,7 +17,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '110518', type: 'movie' },
-                { server: 'multembed', id: '110518', type: 'movie' },
+                { server: 'multiembed', id: '110518', type: 'movie' },
                 { server: 'myembed', id: '110518', type: 'movie' }
             ]
         },
@@ -37,7 +37,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '112897', type: 'movie' },
-                { server: 'multembed', id: '112897', type: 'movie' },
+                { server: 'multiembed', id: '112897', type: 'movie' },
                 { server: 'myembed', id: '112897', type: 'movie' }
             ]
         },
@@ -57,7 +57,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '112903', type: 'movie' },
-                { server: 'multembed', id: '112903', type: 'movie' },
+                { server: 'multiembed', id: '112903', type: 'movie' },
                 { server: 'myembed', id: '112903', type: 'movie' }
             ]
         },
@@ -77,7 +77,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES', 'fr-FR'],
             streams: [
                 { server: 'vidsrc', id: '69372', type: 'movie' },
-                { server: 'multembed', id: '69372', type: 'movie' },
+                { server: 'multiembed', id: '69372', type: 'movie' },
                 { server: 'myembed', id: '69372', type: 'movie' }
             ]
         },
@@ -97,7 +97,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '76600', type: 'movie' },
-                { server: 'multembed', id: '76600', type: 'movie' },
+                { server: 'multiembed', id: '76600', type: 'movie' },
                 { server: 'myembed', id: '76600', type: 'movie' }
             ]
         }
@@ -120,7 +120,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '120461', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '120461', type: 'tv', season: 1, episode: 1 },
+                { server: 'multiembed', id: '120461', type: 'tv', season: 1, episode: 1 },
                 { server: 'myembed', id: '120461', type: 'tv', season: 1, episode: 1 }
             ]
         },
@@ -141,7 +141,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '95557', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '95557', type: 'tv', season: 1, episode: 1 },
+                { server: 'multiembed', id: '95557', type: 'tv', season: 1, episode: 1 },
                 { server: 'myembed', id: '95557', type: 'tv', season: 1, episode: 1 }
             ]
         },
@@ -162,7 +162,7 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '100088', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '100088', type: 'tv', season: 1, episode: 1 },
+                { server: 'multiembed', id: '100088', type: 'tv', season: 1, episode: 1 },
                 { server: 'myembed', id: '100088', type: 'tv', season: 1, episode: 1 }
             ]
         }
