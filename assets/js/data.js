@@ -17,7 +17,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '110518', type: 'movie' },
-                { server: 'multembed', id: '110518', type: 'movie' }
+                { server: 'multembed', id: '110518', type: 'movie' },
+                { server: 'myembed', id: '110518', type: 'movie' }
             ]
         },
         {
@@ -36,7 +37,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '112897', type: 'movie' },
-                { server: 'multembed', id: '112897', type: 'movie' }
+                { server: 'multembed', id: '112897', type: 'movie' },
+                { server: 'myembed', id: '112897', type: 'movie' }
             ]
         },
         {
@@ -55,7 +57,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '112903', type: 'movie' },
-                { server: 'multembed', id: '112903', type: 'movie' }
+                { server: 'multembed', id: '112903', type: 'movie' },
+                { server: 'myembed', id: '112903', type: 'movie' }
             ]
         },
         {
@@ -74,7 +77,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES', 'fr-FR'],
             streams: [
                 { server: 'vidsrc', id: '69372', type: 'movie' },
-                { server: 'multembed', id: '69372', type: 'movie' }
+                { server: 'multembed', id: '69372', type: 'movie' },
+                { server: 'myembed', id: '69372', type: 'movie' }
             ]
         },
         {
@@ -92,7 +96,9 @@ const CONTENT_DATABASE = {
             dubbing: ['pt-BR', 'en-US'],
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
-                { server: 'vidsrc', id: '76600', type: 'movie' }
+                { server: 'vidsrc', id: '76600', type: 'movie' },
+                { server: 'multembed', id: '76600', type: 'movie' },
+                { server: 'myembed', id: '76600', type: 'movie' }
             ]
         }
     ],
@@ -114,7 +120,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '120461', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '120461', type: 'tv', season: 1, episode: 1 }
+                { server: 'multembed', id: '120461', type: 'tv', season: 1, episode: 1 },
+                { server: 'myembed', id: '120461', type: 'tv', season: 1, episode: 1 }
             ]
         },
         {
@@ -134,7 +141,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '95557', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '95557', type: 'tv', season: 1, episode: 1 }
+                { server: 'multembed', id: '95557', type: 'tv', season: 1, episode: 1 },
+                { server: 'myembed', id: '95557', type: 'tv', season: 1, episode: 1 }
             ]
         },
         {
@@ -154,7 +162,8 @@ const CONTENT_DATABASE = {
             subtitles: ['pt-BR', 'en-US', 'es-ES'],
             streams: [
                 { server: 'vidsrc', id: '100088', type: 'tv', season: 1, episode: 1 },
-                { server: 'multembed', id: '100088', type: 'tv', season: 1, episode: 1 }
+                { server: 'multembed', id: '100088', type: 'tv', season: 1, episode: 1 },
+                { server: 'myembed', id: '100088', type: 'tv', season: 1, episode: 1 }
             ]
         }
     ]
@@ -257,8 +266,13 @@ function getStreamUrl(content, server = 'vidsrc', season = null, episode = null)
             return `https://vidsrc.to/embed/tv/${streamConfig.id}/${season}/${episode || 1}`;
         }
         return `https://vidsrc.to/embed/movie/${streamConfig.id}`;
+    } else if (server === 'myembed') {
+        if (season) {
+            return `https://myembed.biz/filme/${streamConfig.id}?season=${season}&episode=${episode}`;
+        }
+        return `https://myembed.biz/filme/${streamConfig.id}`;
     }
-    
+
     return null;
 }
 

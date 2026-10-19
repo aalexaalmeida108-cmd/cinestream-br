@@ -148,6 +148,11 @@ function embedUrl(item, server = 'original', season = 1, episode = 1) {
             : `https://multiembed.mov/?video_id=${id}&tmdb=1`;
     }
 
+    if (server === 'myembed') {
+        // myembed usa TMDB ID para filmes e série
+        return `https://myembed.biz/filme/${id}`;
+    }
+
     return null;
 }
 

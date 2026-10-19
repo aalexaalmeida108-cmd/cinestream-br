@@ -10,12 +10,13 @@ const AppState = {
     settings: JSON.parse(localStorage.getItem('cs:settings') || JSON.stringify(USER_PREFS))
 };
 
-const SERVERS = ['original', 'vsembed', 'vidlink', 'multiembed'];
+const SERVERS = ['original', 'vsembed', 'vidlink', 'multiembed', 'myembed'];
 const SERVER_LABELS = {
     'original': '⭐ Player Original (PT-BR)',
     'vsembed': 'VidSrc',
     'vidlink': 'VidLink',
-    'multiembed': 'MultiEmbed'
+    'multiembed': 'MultiEmbed',
+    'myembed': 'MyEmbed'
 };
 
 // ============================================
