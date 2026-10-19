@@ -613,3 +613,14 @@ body.light-mode .modal-content {
 .dubbing-notice strong {
     color: var(--accent);
 }
+
+.catalog-status {
+    font-size: 0.75rem;
+    color: var(--text-muted, #888);
+    white-space: nowrap;
+    opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+    .catalog-status { display: none; }
+}
