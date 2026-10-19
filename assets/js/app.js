@@ -3,15 +3,20 @@
 const AppState = {
     currentPage: 'home',
     currentContent: null,
-    currentServer: 'vidsrc',
+    currentServer: 'original',
     currentSeason: 1,
     currentEpisode: 1,
     favorites: JSON.parse(localStorage.getItem('cs:favorites') || '[]'),
     settings: JSON.parse(localStorage.getItem('cs:settings') || JSON.stringify(USER_PREFS))
 };
 
-const SERVERS = ['vidsrc', 'multembed', 'vidsrc-to'];
-const SERVER_LABELS = { 'vidsrc': 'VidSrc', 'multembed': 'MultiEmbed', 'vidsrc-to': 'VidSrc.to' };
+const SERVERS = ['original', 'vsembed', 'vidlink', 'multiembed'];
+const SERVER_LABELS = {
+    'original': '⭐ Player Original (PT-BR)',
+    'vsembed': 'VidSrc',
+    'vidlink': 'VidLink',
+    'multiembed': 'MultiEmbed'
+};
 
 // ============================================
 // NAVEGAÇÃO
@@ -344,7 +349,11 @@ function loadPlayer(content) {
     const info = document.getElementById('player-info');
     const type = content.type || 'movie';
 
-    const streamUrl = embedUrl(content, AppState.currentServer, AppState.currentSeason, AppState.currentEpisode);
+    let streamUrl = embedUrl(content, AppState.currentServer, AppState.currentSeason, AppState.currentEpisode);
+    if (!streamUrl && AppState.currentServer === 'original') {
+        // item sem play_url (modo seed) — cai para servidor externo
+        streamUrl = embedUrl(content, 'vsembed', AppState.currentSeason, AppState.currentEpisode);
+    }
     if (iframe) iframe.src = streamUrl || 'about:blank';
 
     if (info) {
@@ -390,12 +399,19 @@ function loadPlayer(content) {
                         ${AppState.favorites.some(f => f.id === content.id && f.type === type) ? '⭐ Remover dos Favoritos' : '☆ Adicionar aos Favoritos'}
                     </button>
                 </div>
+                <div class="control-group">
+                    <button class="btn btn-secondary" id="open-external-btn">↗ Abrir em nova aba</button>
+                </div>
             </div>
 
             <div class="dubbing-notice">
-                <p>💡 <strong>Dica:</strong> Para assistir com dublagem em Português Brasil, selecione a faixa de áudio <strong>Português (BR)</strong> no controle do player. A maioria dos servidores oferece múltiplas faixas.</p>
+                <p>💡 <strong>Dica:</strong> no <strong>Player Original</strong>, use o controle do player para escolher o áudio <strong>Português (BR)</strong> e as legendas. Se um servidor não abrir, troque no seletor acima.</p>
             </div>
         `;
+
+        document.getElementById('open-external-btn')?.addEventListener('click', () => {
+            if (streamUrl) window.open(streamUrl, '_blank', 'noopener');
+        });
 
         document.getElementById('server-select')?.addEventListener('change', (e) => {
             AppState.currentServer = e.target.value;

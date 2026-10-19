@@ -65,7 +65,9 @@ const CatalogDB = {
             backdrop: item.backdrop || null,
             popularity: item.popularity || 0,
             seasons: item.seasons || 0,
-            episodes: item.episodes || 0
+            episodes: item.episodes || 0,
+            play_url: item.play_url || null,
+            url: item.url || null
         };
     },
 
@@ -115,18 +117,37 @@ const CatalogDB = {
     }
 };
 
-// URL de embed para reprodução (mesmos provedores usados pelo site original)
-function embedUrl(item, server = 'vidsrc', season = 1, episode = 1) {
+// URL de embed para reprodução.
+// 'original' = player do próprio bingebang (play_url do catálogo) — tem dublagem PT-BR
+// 'vsembed' / 'vidlink' / 'multiembed' = servidores externos de reserva (por TMDB id)
+function embedUrl(item, server = 'original', season = 1, episode = 1) {
     const id = item.id;
-    if (item.type === 'tv') {
-        if (server === 'vidsrc') return `https://vidsrc.xyz/embed/tv?tmdb=${id}&season=${season}&episode=${episode}`;
-        if (server === 'multembed') return `https://multembed.mov/?video_id=${id}&tmdb=1&s=${season}&e=${episode}`;
-        if (server === 'vidsrc-to') return `https://vidsrc.to/embed/tv/${id}/${season}/${episode}`;
-    } else {
-        if (server === 'vidsrc') return `https://vidsrc.xyz/embed/movie?tmdb=${id}`;
-        if (server === 'multembed') return `https://multembed.mov/?video_id=${id}&tmdb=1`;
-        if (server === 'vidsrc-to') return `https://vidsrc.to/embed/movie/${id}`;
+
+    if (server === 'original') {
+        if (!item.play_url) return null;
+        let u = 'https://bingebang.st' + item.play_url;
+        if (item.type === 'tv') u += `/${season}/${episode}`;
+        return u;
     }
+
+    if (server === 'vsembed') {
+        return item.type === 'tv'
+            ? `https://vsembed.ru/embed/tv/${id}/${season}/${episode}/`
+            : `https://vsembed.ru/embed/movie/${id}/`;
+    }
+
+    if (server === 'vidlink') {
+        return item.type === 'tv'
+            ? `https://vidlink.pro/tv/${id}/${season}/${episode}`
+            : `https://vidlink.pro/movie/${id}`;
+    }
+
+    if (server === 'multiembed') {
+        return item.type === 'tv'
+            ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${season}&e=${episode}`
+            : `https://multiembed.mov/?video_id=${id}&tmdb=1`;
+    }
+
     return null;
 }
 
