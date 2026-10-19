@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
 
       - name: Sync catalog from bingebang.st
-        run: python3 scripts/sync_catalog.py
+        run: python3 scripts/sync_catalog.py || echo "::warning::sync bloqueado neste runner (Cloudflare/ASN) — catálogo mantido"
 
       - name: Commit & push if changed
         run: |

@@ -160,6 +160,11 @@ def main() -> int:
     for k, v in sorted(discover.items()):
         print(f"  {k}: {len(v)} itens")
 
+    if fetched == 0:
+        print("✗ nenhum endpoint respondeu — provável bloqueio de IP (Cloudflare). "
+              "catálogo NÃO foi alterado.", file=sys.stderr)
+        return 2
+
     catalog = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": "bingebang.st/api",
